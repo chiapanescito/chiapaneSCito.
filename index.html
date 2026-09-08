@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ChiapaneSCito | Punto de Venta</title>
+
+    <meta
+        name="description"
+        content="ChiapaneSCito - rico PAN de Chiapa de Corzo. Pan artesanal para distribuidores, negocios y emprendimientos."
+    >
+
+    <style>
+
+        /* ==================================================
+           CONFIGURACIÓN GENERAL
+        ================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8ed;
+            color: #3b2415;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* ==================================================
+           ENCABEZADO
+        ================================================== */
+
+        header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffaf3,
+                    #f5dfc0
+                );
+
+            text-align: center;
+
+            padding: 10px 15px 55px;
+
+            border-bottom: 1px solid #ead4b8;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: block;
+
+            width: min(650px, 96vw);
+
+            max-height: 410px;
+
+            height: auto;
+
+            object-fit: contain;
+
+            margin: 0 auto;
+        }
+
+
+        /* NOMBRE */
+
+        header h1 {
+
+            font-size:
+                clamp(36px, 6vw, 56px);
+
+            color: #6d3515;
+
+            font-weight: 800;
+
+            margin-top: -5px;
+        }
+
+
+        /* ESLOGAN */
+
+        .eslogan {
+
+            font-size:
+                clamp(21px, 3vw, 29px);
+
+            color: #7c451f;
+
+            font-weight: 700;
+
+            margin-top: 5px;
+        }
+
+
+        .descripcion-principal {
+
+            max-width: 850px;
+
+            margin: 14px auto 0;
+
+            font-size: 18px;
+
+            color: #594131;
+        }
+
+
+        /* ==================================================
+           BOTONES
+        ================================================== */
+
+        .boton {
+
+            display: inline-block;
+
+            margin-top: 24px;
+
+            padding: 15px 28px;
+
+            border-radius: 50px;
+
+            background: #168a3a;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+
+        .boton:hover {
+
+            background: #106b2c;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* ==================================================
+           CONTENEDOR
+        ================================================== */
+
+        .contenedor {
+
+            width: 100%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 60px 20px;
+        }
+
+
+        /* ==================================================
+           TÍTULOS
+        ================================================== */
+
+        .titulo-seccion {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+
+        .titulo-seccion h2 {
+
+            font-size:
+                clamp(29px, 4vw, 40px);
+
+            color: #6d3515;
+
+            margin-bottom: 10px;
+        }
+
+
+        .titulo-seccion p {
+
+            font-size: 18px;
+
+            color: #694c37;
+        }
+
+
+        /* ==================================================
+           BENEFICIOS
+        ================================================== */
+
+        .beneficios {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .beneficio {
+
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 30px 22px;
+
+            text-align: center;
+
+            border: 1px solid #f0dfca;
+
+            box-shadow:
+                0 6px 20px
+                rgba(60,35,15,0.10);
+        }
+
+
+        .icono {
+
+            font-size: 44px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .beneficio h3 {
+
+            color: #6d3515;
+
+            font-size: 23px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .beneficio p {
+
+            font-size: 16px;
+        }
+
+
+        .entregas {
+
+            text-align: left;
+
+            margin-top: 12px;
+        }
+
+
+        .entregas p {
+
+            margin: 7px 0;
+        }
+
+
+        .extra {
+
+            color: #8a451c;
+
+            font-weight: bold;
+
+            margin-top: 12px !important;
+        }
+
+
+        /* ==================================================
+           CÓMO FUNCIONA
+        ================================================== */
+
+        .funciona {
+
+            margin-top: 60px;
+
+            background: #f0dcc0;
+
+            border-radius: 24px;
+
+            padding: 50px 25px;
+        }
+
+
+        .funciona-intro {
+
+            text-align: center;
+
+            max-width: 850px;
+
+            margin: 0 auto 35px;
+
+            font-size: 18px;
+        }
+
+
+        .pasos {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .paso {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 28px 22px;
+
+            border: 1px solid #ead4b8;
+        }
+
+
+        .numero {
+
+            width: 46px;
+
+            height: 46px;
+
+            border-radius: 50%;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #6d3515;
+
+            color: white;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+
+        .paso h3 {
+
+            text-align: center;
+
+            color: #6d3515;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .paso p {
+
+            text-align: center;
+
+            font-size: 16px;
+        }
+
+
+        /* ==================================================
+           PAQUETES
+        ================================================== */
+
+        .paquetes {
+
+            margin-top: 60px;
+        }
+
+
+        .paquetes-subtitulo {
+
+            text-align: center;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            color: #8a451c;
+
+            margin-top: -18px;
+
+            margin-bottom: 38px;
+        }
+
+
+        .productos {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+
+        .producto {
+
+            position: relative;
+
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            text-align: center;
+
+            border: 1px solid #f0dfca;
+
+            box-shadow:
+                0 7px 22px
+                rgba(60,35,15,0.12);
+
+            transition: 0.25s;
+        }
+
+
+        .producto:hover {
+
+            transform: translateY(-6px);
+        }
+
+
+        /* COMBO DESTACADO */
+
+        .producto.destacado {
+
+            border:
+                4px solid #d28a32;
+
+            box-shadow:
+                0 10px 30px
+                rgba(181,111,31,0.25);
+        }
+
+
+        /* ==================================================
+           FOTO DE PRODUCTO
+        ================================================== */
+
+        .foto-producto {
+
+            width: 100%;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            display: block;
+        }
+
+
+        .contenido-producto {
+
+            padding: 27px 22px 32px;
+        }
+
+
+        /* ETIQUETA MÁS PEDIDO */
+
+        .mas-pedido {
+
+            display: inline-block;
+
+            background: #d28a32;
+
+            color: white;
+
+            padding: 8px 17px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+
+            box-shadow:
+                0 3px 8px
+                rgba(0,0,0,0.15);
+        }
+
+
+        .producto h3 {
+
+            color: #6d3515;
+
+            font-size: 29px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .cantidad {
+
+            color: #5f4635;
+
+            font-size: 18px;
+
+            font-weight: 600;
+        }
+
+
+        .precio {
+
+            color: #8a451c;
+
+            font-size: 43px;
+
+            font-weight: 800;
+
+            margin: 13px 0;
+        }
+
+
+        .producto ul {
+
+            list-style: none;
+
+            margin: 20px 0;
+        }
+
+
+        .producto li {
+
+            margin: 9px 0;
+
+            font-size: 16px;
+        }
+
+
+        /* ==================================================
+           ÚLTIMO APARTADO
+        ================================================== */
+
+        .cta {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d3515,
+                    #8d4a1f
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 65px 20px;
+        }
+
+
+        .cta h2 {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            font-size:
+                clamp(28px, 4vw, 40px);
+
+            margin-bottom: 15px;
+        }
+
+
+        .cta p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size: 18px;
+        }
+
+
+        /* ==================================================
+           PIE DE PÁGINA
+        ================================================== */
+
+        footer {
+
+            background: #29170d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 15px;
+        }
+
+
+        footer p {
+
+            margin: 5px 0;
+        }
+
+
+        /* ==================================================
+           CELULAR
+        ================================================== */
+
+        @media (max-width: 850px) {
+
+            .beneficios,
+            .pasos,
+            .productos {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .logo {
+
+                width: 98vw;
+
+                max-height: 330px;
+            }
+
+
+            .foto-producto {
+
+                height: auto;
+
+                max-height: 500px;
+
+                object-fit: cover;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            header {
+
+                padding: 5px 8px 42px;
+            }
+
+
+            .logo {
+
+                width: 100%;
+
+                max-height: 280px;
+            }
+
+
+            .descripcion-principal {
+
+                font-size: 16px;
+            }
+
+
+            .contenedor {
+
+                padding: 45px 15px;
+            }
+
+
+            .funciona {
+
+                padding:
+                    40px 18px;
+            }
+
+
+            .producto {
+
+                border-radius: 18px;
+            }
+
+
+            .contenido-producto {
+
+                padding:
+                    25px 17px 30px;
+            }
+
+
+            .foto-producto {
+
+                width: 100%;
+
+                height: auto;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     ENCABEZADO
+================================================== -->
+
+<header>
+
+
+    <img
+        class="logo"
+        src="logo-chiapanescito.png"
+        alt="ChiapaneSCito"
+    >
+
+
+    <h1>
+        ChiapaneSCito
+    </h1>
+
+
+    <div class="eslogan">
+        rico PAN de Chiapa de Corzo
+    </div>
+
+
+    <p class="descripcion-principal">
+
+        Pan caliente y recién hecho para tiendas,
+        cafeterías, negocios, distribuidores
+        y emprendimientos.
+
+    </p>
+
+
+</header>
+
+
+
+<!-- ==================================================
+     CONTENIDO
+================================================== -->
+
+<main class="contenedor">
+
+
+    <!-- ==================================================
+         OPORTUNIDAD
+    ================================================== -->
+
+    <section>
+
+
+        <div class="titulo-seccion">
+
+            <h2>
+                Una oportunidad para tu negocio
+                o emprendimiento
+            </h2>
+
+
+            <p>
+                Conoce las ventajas de vender
+                ChiapaneSCito e incrementar tus ingresos.
+            </p>
+
+        </div>
+
+
+
+        <div class="beneficios">
+
+
+            <!-- PAN CALIENTE -->
+
+            <div class="beneficio">
+
+                <div class="icono">
+                    🔥
+                </div>
+
+
+                <h3>
+                    Pan caliente
+                </h3>
+
+
+                <p>
+                    Pan fresco y recién hecho
+                    para ofrecer a tus clientes.
+                </p>
+
+            </div>
+
+
+
+            <!-- ENTREGA -->
+
+            <div class="beneficio">
+
+                <div class="icono">
+                    🚚
+                </div>
+
+
+                <h3>
+                    Recibe en tu domicilio o negocio
+                </h3>
+
+
+                <div class="entregas">
+
+                    <p>
+                        <strong>
+                            Entregas físicas:
+                        </strong>
+                    </p>
+
+
+                    <p>
+                        Lunes, martes y miércoles
+                        en Tuxtla Gutiérrez
+                        y Chiapa de Corzo.
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Martes:
+                        </strong>
+                        San Cristóbal.
+                    </p>
+
+
+                    <p class="extra">
+
+                        *Envíos por ruta local
+                        o paquetería
+
+                        <br>
+
+                        *CON COSTO EXTRA*
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRECIO MAYOREO -->
+
+            <div class="beneficio">
+
+                <div class="icono">
+                    💰
+                </div>
+
+
+                <h3>
+                    Precio de mayoreo
+                </h3>
+
+
+                <p>
+                    Ser distribuidor te da acceso
+                    a una inversión preferente.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         CÓMO FUNCIONA
+    ================================================== -->
+
+    <section class="funciona">
+
+
+        <div class="titulo-seccion">
+
+            <h2>
+                ¿Cómo funciona?
+            </h2>
+
+        </div>
+
+
+        <p class="funciona-intro">
+
+            Ser distribuidor es sencillo,
+            elige el paquete, proporciona tus datos
+            y forma de pago y espera tu entrega.
+
+        </p>
+
+
+
+        <div class="pasos">
+
+
+            <!-- PASO 1 -->
+
+            <div class="paso">
+
+                <div class="numero">
+                    1
+                </div>
+
+
+                <h3>
+                    Elige tu paquete
+                </h3>
+
+
+                <p>
+                    Selecciona del catálogo
+                    los paquetes que requieras.
+                </p>
+
+            </div>
+
+
+
+            <!-- PASO 2 -->
+
+            <div class="paso">
+
+                <div class="numero">
+                    2
+                </div>
+
+
+                <h3>
+                    Escríbenos
+                </h3>
+
+
+                <p>
+                    Proporciona las referencias
+                    de tu entrega y establece
+                    tu método de pago.
+                </p>
+
+            </div>
+
+
+
+            <!-- PASO 3 -->
+
+            <div class="paso">
+
+                <div class="numero">
+                    3
+                </div>
+
+
+                <h3>
+                    Comienza a vender
+                </h3>
+
+
+                <p>
+                    Gana más vendiendo
+                    ChiapaneSCito con tus clientes.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PAQUETES
+    ================================================== -->
+
+    <section class="paquetes">
+
+
+        <div class="titulo-seccion">
+
+            <h2>
+                Paquetes al mayoreo
+            </h2>
+
+        </div>
+
+
+        <p class="paquetes-subtitulo">
+
+            Cualquiera de nuestros paquetes en $400
+
+        </p>
+
+
+
+        <div class="productos">
+
+
+            <!-- ==================================================
+                 TRADICIONAL
+            ================================================== -->
+
+            <article class="producto">
+
+
+                <img
+                    class="foto-producto"
+                    src="foto-tradicional.jpeg"
+                    alt="Pan Tradicional ChiapaneSCito"
+                >
+
+
+                <div class="contenido-producto">
+
+
+                    <h3>
+                        Tradicional
+                    </h3>
+
+
+                    <div class="cantidad">
+
+                        100 piezas de 30 grs
+
+                    </div>
+
+
+                    <div class="precio">
+
+                        $400
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            ✓ Surtido de 18 modelos diferentes
+                        </li>
+
+                        <li>
+                            ✓ Precio competitivo para reventa
+                        </li>
+
+                        <li>
+                            ✓ Pan fresco
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        class="boton"
+
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20hacer%20mi%20pedido.%20Me%20interesa%20el%20paquete%20Tradicional."
+
+                        target="_blank"
+
+                        rel="noopener noreferrer"
+                    >
+
+                        HAZ TU PEDIDO AHORA
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 ARTESANAL
+            ================================================== -->
+
+            <article class="producto">
+
+
+                <img
+                    class="foto-producto"
+                    src="foto-artesanal.jpeg"
+                    alt="Pan Artesanal ChiapaneSCito"
+                >
+
+
+                <div class="contenido-producto">
+
+
+                    <h3>
+                        Artesanal
+                    </h3>
+
+
+                    <div class="cantidad">
+
+                        50 piezas de 60 gr
+
+                    </div>
+
+
+                    <div class="precio">
+
+                        $400
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            ✓ Masa enriquecida con textura suave
+                        </li>
+
+                        <li>
+                            ✓ Rellenos deliciosos
+                        </li>
+
+                        <li>
+                            ✓ Surtido de 11 sabores distintos
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        class="boton"
+
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20hacer%20mi%20pedido.%20Me%20interesa%20el%20paquete%20Artesanal."
+
+                        target="_blank"
+
+                        rel="noopener noreferrer"
+                    >
+
+                        HAZ TU PEDIDO AHORA
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 COMBO VARIEDAD
+            ================================================== -->
+
+            <article class="producto destacado">
+
+
+                <img
+                    class="foto-producto"
+                    src="foto-combo-variedad.jpeg"
+                    alt="Combo Variedad ChiapaneSCito"
+                >
+
+
+                <div class="contenido-producto">
+
+
+                    <!-- MÁS PEDIDO -->
+
+                    <div class="mas-pedido">
+
+                        ⭐ MÁS PEDIDO
+
+                    </div>
+
+
+                    <h3>
+                        Combo Variedad
+                    </h3>
+
+
+                    <div class="cantidad">
+
+                        50 Tradicional + 25 Artesanal
+
+                    </div>
+
+
+                    <div class="precio">
+
+                        $400
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            ✓ Más variedad para tus clientes
+                        </li>
+
+                        <li>
+                            ✓ Más rendidor
+                        </li>
+
+                        <li>
+                            ✓ rico PAN de Chiapa de Corzo
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        class="boton"
+
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20hacer%20mi%20pedido.%20Me%20interesa%20el%20Combo%20Variedad."
+
+                        target="_blank"
+
+                        rel="noopener noreferrer"
+                    >
+
+                        HAZ TU PEDIDO AHORA
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     ÚLTIMO APARTADO
+================================================== -->
+
+<section class="cta">
+
+
+    <h2>
+
+        ¿Quieres ser un punto de venta
+        de ChiapaneSCito?
+
+    </h2>
+
+
+    <p>
+
+        Escribe un WhatsApp con la palabra
+        <strong>PUNTO DE VENTA</strong>
+        y ve si reúne los requisitos.
+
+    </p>
+
+
+    <a
+        class="boton"
+
+        href="https://wa.me/529616581640?text=PUNTO%20DE%20VENTA"
+
+        target="_blank"
+
+        rel="noopener noreferrer"
+    >
+
+        CLICK AQUÍ
+
+    </a>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     PIE DE PÁGINA
+================================================== -->
+
+<footer>
+
+
+    <p>
+
+        <strong>
+            ChiapaneSCito
+        </strong>
+
+    </p>
+
+
+    <p>
+        rico PAN de Chiapa de Corzo
+    </p>
+
+
+    <p>
+        Punto de venta · Pan al mayoreo
+    </p>
+
+
+    <p>
+        © 2026 ChiapaneSCito
+    </p>
+
+
+</footer>
+
+
+</body>
+
+</html>
